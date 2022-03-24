@@ -1,0 +1,32 @@
+<app-debitcard [formDetails]="formDetails"></app-debitcard>
+
+<div class="row">
+    <div class="col-md-4" style="margin-top: 20px; margin-left: 30px;">
+        <form [formGroup]="cardForm">
+            <div class="col-md-12">
+                <div class="form-group" style="margin-bottom: 10px;">
+                    <label>Card Number</label><br>
+                    <input type="text" formControlName="number" class="form-group w-100" (input)="getNumber()" placeholder="Enter card No" />
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-bottom: 10px;">
+                <div class="form-group">
+                    <label>Card Holders Name</label><br>
+                    <input type="text" formControlName="name" class="form-group w-100" (input)="getName()" placeholder="Enter Holders Name" />
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-bottom: 10px;">
+                <div class="form-group">
+                    <label>Expiry Date</label><br>
+                    <input type="text" formControlName="date" class="form-group w-100" (input)="getDate()" placeholder="Enter Date" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>CVV No</label><br>
+                    <input type="text" formControlName="cvv" class="form-group w-100" (input)="getCvv()" (blur)="getDetails()" placeholder="Enter CVV" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
